@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <style>
+        body {
+          font-family: inter;
+          font-weight: 300;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        @font-face {
+            font-family: inter;
+            src: url("/Inter-Regular.ttf");
+            font-weight: 300;
+        }
+        div {
+          width: 500px;
+          height: 600px;
+        }
+        p{
+          text-align: justify;
+        }
+    </style>
+    <script defer>
+      addEventListener('DOMContentLoaded', (event) => {
+        let r = 0;
+        for (let i = 0; i < window.location.hostname.length; i += 1) {
+          console.log()
+          r += window.location.hostname.charCodeAt(i);
+        }
+        const img = document.getElementsByTagName('img')[0];
+        img.setAttribute('src', `/${r % 18}.jpg`)
+      });
+
+    </script>
+  </head>
+  <body>
+    <div>
+      <h4>dappy default website</h4>
+      <img></img>
+      <p>This is a default website on dappy. Now you must update the A and CERT records in your zone and point it to your server.</p>
+      <p style="font-size:0.6rem"><br />The image above is randomly selected based on domain name</p>
+    </div>
+  </body>
+</html>
