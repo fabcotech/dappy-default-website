@@ -1,0 +1,16 @@
+{
+  "origin": "dappy",
+  "ttl": 3600,
+  "records": [
+    {
+      "name": "test2",
+      "type": "A",
+      "data": "134.209.84.129"
+    },
+    {
+      "type": "CERT",
+      "name": "test2",
+      "data": "--"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "origin": "test",
+  "ttl": 3600,
+  "records": [
+    {
+      "name": "@",
+      "type": "TXT",
+      "data": "CSP=default-src https://test.dappy.gamma; script-src-elem https://test.dappy.gamma https://test2.dappy.gamma; img-src 'self';"
+    },
+    {
+      "name": "test",
+      "type": "A",
+      "data": "134.209.84.129"
+    },
+    {
+      "type": "CERT",
+      "name": "test",
+      "data": "--"
+    }
+  ]
+}

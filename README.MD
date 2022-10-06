@@ -26,4 +26,5 @@ openssl req \
 utf8 -> base64
 
 ```
+base64 mydomain.crt > tmp.crt && tr -d '\n' < tmp.crt > mydomain.base64
 ```
