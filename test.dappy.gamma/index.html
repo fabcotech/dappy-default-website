@@ -30,7 +30,7 @@
   <p>You should see a log "CSP script-src sha256-x is ok !" it means that the rule to whitelist a precise script with sha256 hash has worked</p>
   <hr />
   <h4>CSP (image)</h4>
-  <p>You should not see this image hosted at <b>https://test2.dappy.gamma/</b> <i>rule: img-src 'self';</i> :
+  <p>You should not see this image hosted at <b>https://test2.dappy.gamma/</b> <i>rule: img-src 'self';</i> even though in the head, a meta tag tries to allow image from https://test2.dappy.gamma :
   </p>
   <img style="border:1px solid #aaa;" width="300px" height="100px" src="https://test2.dappy.gamma/test2.png"></img>
   <p>You should see this image hosted at <b>https://test.dappy.gamma/test2</b> <i>rule: img-src 'self';</i> :
