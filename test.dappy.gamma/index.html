@@ -30,7 +30,8 @@
   <img style="border:1px solid #aaa;" width="300px" height="auto"
     src="https://test.dappy.gamma/test.png"></img>
   <hr />
-  <script>
+  <script defer type="text/javascript">
+    console.log('executes')
     const jsonFile = `{ "1": "1", "2": "2", "3": "3", "4": "4" }`
     addEventListener('DOMContentLoaded', (event) => {
       document.getElementById('download-from-js').addEventListener('click', (e) => {

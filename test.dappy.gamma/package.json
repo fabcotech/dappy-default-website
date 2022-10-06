@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:prod": "export NODE_ENV=production && pm2 start ./index.js --name=\"test.dappy.gamma\""
+    "start:prod": "export NODE_ENV=production && pm2 start ./index.js --name=\"test.dappy.gamma\"",
+    "stop:prod": "pm2 stop test.dappy.gamma"
   },
   "keywords": [],
   "author": "",
