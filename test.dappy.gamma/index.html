@@ -30,8 +30,7 @@
   <img style="border:1px solid #aaa;" width="300px" height="auto"
     src="https://test.dappy.gamma/test.png"></img>
   <hr />
-  <script defer type="text/javascript">
-console.log('executes')
+  <script defer type="text/javascript">console.log('executes')
 const jsonFile = `{ "1": "1", "2": "2", "3": "3", "4": "4" }`
 addEventListener('DOMContentLoaded', (event) => {
   document.getElementById('download-from-js').addEventListener('click', (e) => {
@@ -47,8 +46,7 @@ addEventListener('DOMContentLoaded', (event) => {
     element.click();
     document.body.removeChild(element);
   })
-});
-  </script>
+});</script>
   <p>Download from javascript should work</p>
   <a type="button" id="download-from-js" href="#" >Download from JS</a>
   <hr />
