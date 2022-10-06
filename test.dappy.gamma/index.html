@@ -31,23 +31,23 @@
     src="https://test.dappy.gamma/test.png"></img>
   <hr />
   <script defer type="text/javascript">
-    console.log('executes')
-    const jsonFile = `{ "1": "1", "2": "2", "3": "3", "4": "4" }`
-    addEventListener('DOMContentLoaded', (event) => {
-      document.getElementById('download-from-js').addEventListener('click', (e) => {
-        e.preventDefault();
-        const element = document.createElement('a');
-        element.setAttribute(
-          'href',
-          `data:application/json;charset=utf-8,${encodeURIComponent(jsonFile)}`
-        );
-        element.setAttribute('download', 'numbers.json');
-        element.style.display = 'none';
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
-      })
-    });
+console.log('executes')
+const jsonFile = `{ "1": "1", "2": "2", "3": "3", "4": "4" }`
+addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById('download-from-js').addEventListener('click', (e) => {
+    e.preventDefault();
+    const element = document.createElement('a');
+    element.setAttribute(
+      'href',
+      `data:application/json;charset=utf-8,${encodeURIComponent(jsonFile)}`
+    );
+    element.setAttribute('download', 'numbers.json');
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  })
+});
   </script>
   <p>Download from javascript should work</p>
   <a type="button" id="download-from-js" href="#" >Download from JS</a>
