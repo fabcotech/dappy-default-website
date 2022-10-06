@@ -9,7 +9,7 @@ app.get('/test2.js', (req, res) => {
   res.setHeader('Content-Type', "text/javascript");
   res.send(fs.readFileSync(__dirname + '/test2.js', 'utf8'))
 });
-app.get('/test2.jpg', (req, res) => {
+app.get('/test2.png', (req, res) => {
   res.setHeader('Content-Type', "image/png");
   res.send(fs.readFileSync(__dirname + '/test2.png'))
 });
