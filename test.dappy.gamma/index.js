@@ -40,8 +40,15 @@ app.post('/blitz-authenticate', (req, res) => {
     res.sendStatus(403);
   }
 });
+
 app.get('/connected', (req, res) => {
   res.send('<html>connected</html>')
+});
+
+app.get('/download', (req, res) => {
+  console.log(__dirname);
+  const file = `${__dirname}/mountain.jpg`;
+  res.download(file);
 });
 
 app.get('/login', (req, res) => {
