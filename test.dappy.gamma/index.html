@@ -30,7 +30,10 @@
   <img style="border:1px solid #aaa;" width="300px" height="auto"
     src="https://test.dappy.gamma/test.png"></img>
   <hr />
-  <script defer type="text/javascript">console.log('executes')
+  <h4>CSP (javascript sha-256)</h4>
+  <p>You should see a log "CSP script-src sha256-x is ok !" it means that the rule to whitelist a precise script with sha256 hash has worked</p>
+  <hr />
+  <script defer type="text/javascript">console.log(`CSP script-src sha256-x is ok ! (this script has been allowed throw sha 256 hash)`)
 const jsonFile = `{ "1": "1", "2": "2", "3": "3", "4": "4" }`
 addEventListener('DOMContentLoaded', (event) => {
   document.getElementById('download-from-js').addEventListener('click', (e) => {
@@ -47,6 +50,7 @@ addEventListener('DOMContentLoaded', (event) => {
     document.body.removeChild(element);
   })
 });</script>
+  <h4>Downloads</h4>
   <p>Download from javascript should work</p>
   <a type="button" id="download-from-js" href="#" >Download from JS</a>
   <hr />
