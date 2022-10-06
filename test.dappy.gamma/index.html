@@ -2,6 +2,11 @@
 
 <head>
   <meta charset="utf-8"></meta>
+  <!--
+      front end attack, the web server tries to add a new rule and allow images to be loaded from https://test2.dappy.gamma
+      they are blocked by the CSP at name systme level : img-src 'self';
+  -->
+  <meta http-equiv="Content-Security-Policy" content="img-src https://test2.dappy.gamma 'self';">
 </head>
 
 <body style="background: #efefef;padding: 1rem;">
@@ -16,10 +21,13 @@
   <p>It should not load (test2.dappy.gamma) <i>rule: default-src https://test.dappy.gamma</i></p>
   <iframe style="border:1px solid #aaa;" width="300px" height="100px" src="https://test2.dappy.gamma"></iframe>
   <hr />
-  <h4>CSP (javascript)</h4>
+  <h4>CSP (javascript loaded from another host)</h4>
   <p>You should see log "CSP script-src ok ! etc." in JS console <i>rule: script-src-elem https://test.dappy.gamma
       https://test2.dappy.gamma;</i></p>
   <script type='text/javascript' src="https://test2.dappy.gamma/test2.js"></script>
+  <hr />
+  <h4>CSP (javascript whitelisted with sha-256 hash)</h4>
+  <p>You should see a log "CSP script-src sha256-x is ok !" it means that the rule to whitelist a precise script with sha256 hash has worked</p>
   <hr />
   <h4>CSP (image)</h4>
   <p>You should not see this image hosted at <b>https://test2.dappy.gamma/</b> <i>rule: img-src 'self';</i> :
@@ -29,9 +37,6 @@
   </p>
   <img style="border:1px solid #aaa;" width="300px" height="auto"
     src="https://test.dappy.gamma/test.png"></img>
-  <hr />
-  <h4>CSP (javascript sha-256)</h4>
-  <p>You should see a log "CSP script-src sha256-x is ok !" it means that the rule to whitelist a precise script with sha256 hash has worked</p>
   <hr />
   <script defer type="text/javascript">console.log(`CSP script-src sha256-x is ok ! (this script has been allowed throw sha 256 hash)`)
 const jsonFile = `{ "1": "1", "2": "2", "3": "3", "4": "4" }`
