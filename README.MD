@@ -14,13 +14,13 @@ openssl req \
   -keyout wildcard.key \
   -out wildcard.crt \
   -outform PEM \
-  -subj '/CN=default.dappy.d'\
+  -subj '/CN=default.dappy.gamma'\
   -extensions san \
   -config <( \
     echo '[req]'; \
     echo 'distinguished_name=req'; \
     echo '[san]'; \
-    echo 'subjectAltName=DNS.1:localhost,DNS.2:default.dappy.d,DNS.2:default.dappy.gamma')
+    echo 'subjectAltName=DNS.1:localhost,DNS.2:default.dappy.d,DNS.2:default.dappy.gamma,DNS.3:example.dappy.gamma,DNS.4:test.dappy.gamma,DNS.5:test2.dappy.gamma')
 ```
 
 utf8 -> base64
