@@ -20,7 +20,7 @@ openssl req \
     echo '[req]'; \
     echo 'distinguished_name=req'; \
     echo '[san]'; \
-    echo 'subjectAltName=DNS.1:localhost,DNS.2:default.dappy.d,DNS.2:default.dappy.gamma,DNS.3:example.dappy.gamma,DNS.4:test.dappy.gamma,DNS.5:test2.dappy.gamma')
+    echo 'subjectAltName=DNS.1:localhost,DNS.2:default.dappy.d,DNS.2:default.dappy.gamma,DNS.3:example.dappy.gamma,DNS.4:example.dappy.d,DNS.5:test.dappy.gamma,DNS.6:test.dappy.d,DNS.7:test2.dappy.gamma,DNS.8:test2.dappy.d')
 ```
 
 utf8 -> base64
